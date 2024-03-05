@@ -13,7 +13,8 @@ function App() {
         <li>Feed the dogs</li>
       </ul>
       
-      <MyNewComponent />
+      <MyNewComponent someText="Hola Mundo" />
+      <MyNewComponent someText="reutilizo" />
     </div>
   );
 }

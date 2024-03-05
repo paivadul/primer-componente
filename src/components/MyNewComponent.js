@@ -4,7 +4,7 @@ class MyNewComponent extends Component{
     render(){
         return(
             <div>
-                Wer are in MyNewComponent
+                {this.props.someText}
             </div>
         );
     }
