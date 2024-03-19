@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const STATES = {
     "LOADING": 0,
@@ -16,12 +17,12 @@ const MainPages = (props) => {
 
     useEffect(() => {
         let id = Math.floor(Math.random() * 151)
-        // id *= -1
-        fetch("//pokeapi.co/api/v2/pokemon/" + id)
-        .then(response => response.json())
-        .then(data => {
+        id *= -1
+        axios.get("//pokeapi.co/api/v2/pokemon/" + id)
+        .then(response => {
+            // console.log(response) //en response se estarán guardando los tados de la api que AXIOS lee
             setPageState(STATES.READY)
-            setData(data);
+            setData(response.data);
         })
         .catch(err => {
             setPageState(STATES.ERROR)
