@@ -1,10 +1,12 @@
 import './App.css';
-import MyNewComponent from './components/MyNewComponent';
+// import MyNewComponent from './components/MyNewComponent';
+import MainPages from './components/pages/mainPages/MainPages.component';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Dojo!</h1>
+      <MainPages name="Azul" />
+      {/* <h1>Hello Dojo!</h1>
       <h3>Things I need to do</h3>
       <ul>
         <li>Learn React</li>
@@ -14,7 +16,7 @@ function App() {
       </ul>
       
       <MyNewComponent someText="Hola Mundo" />
-      <MyNewComponent someText="reutilizo" />
+      <MyNewComponent someText="reutilizo" /> */}
     </div>
   );
 }
